@@ -1,3 +1,7 @@
-# Spring Boot ActiveMQ Broker
+# ActiveMQ Demos
 
-Demo app of running an activemq broker using Spring Boot as the container.
+Demos of various configurations and features of ActiveMQ.
+
+|||
+|---|---|
+|[activemq-spring-boot](./activemq-spring-boot)|Example of running ActiveMQ as a Spring Boot application|
