@@ -1,0 +1,10 @@
+activemq:
+  config: classpath:activemq.xml
+  data: ./target/
+logging:
+  level:
+    root: error
+    com.github.macgregor.activemq: info
+    org.apache.activemq.broker.BrokerService: info
+    org.apache.activemq.broker.TransportConnector: info
+    org.springframework: info

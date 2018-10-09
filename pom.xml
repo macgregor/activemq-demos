@@ -32,6 +32,6 @@
     </developers>
 
     <modules>
-        <module>activemq-spring-boot</module>
+        <module>activemq-spring-boot-minimal</module>
     </modules>
 </project>

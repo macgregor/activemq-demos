@@ -30,7 +30,7 @@ public class BrokerAutoConfig {
     private String springConfig;
 
     @Bean(initMethod="start", destroyMethod = "stop")
-    public BrokerService umbBroker() throws Exception {
+    public BrokerService broker() throws Exception {
         System.setProperty("spring.config.location", springConfig); //make sure system property is set so activemq.xml can resolve the path
         XBeanBrokerFactory brokerFactory = new XBeanBrokerFactory();
         return brokerFactory.createBroker(new URI(activemqConfig));

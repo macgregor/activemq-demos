@@ -8,10 +8,10 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>activemq-spring-boot</artifactId>
+    <artifactId>activemq-spring-boot-minimal</artifactId>
     <packaging>jar</packaging>
-    <name>activemq-spring-boot</name>
-    <description>Example of running ActiveMQ as a Spring Boot application</description>
+    <name>activemq-spring-boot-minimal</name>
+    <description>Minimal example of running ActiveMQ as a Spring Boot application</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,18 +45,9 @@
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jolokia</groupId>
-            <artifactId>jolokia-core</artifactId>
-        </dependency>
-
 
         <!--
         I intentionally am not using the activemq-all dependency as I was having trouble excluding conflicting dependencies
@@ -148,7 +139,7 @@
             <version>${activemq.version}</version>
         </dependency>
 
-        <!--  -->
+        <!-- https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -160,7 +151,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>${spring.boot.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
